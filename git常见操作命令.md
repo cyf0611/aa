@@ -108,3 +108,11 @@ br
 - ssh-copy-id user@host添加到对应远程主机的用户目录/.ssh目录下
 - 也可以登录远程主机，进入到用户目录/.ssh目录下手动创建authorized_keys文件，并将自已的公钥粘入该文件。
 - 进入git-bash验证是否添加成功：ssh -T git@github.com
+---
+####10. **每次push的时候都需要输入账号密码的解决方法：**
+进入%HOME%目录，一般是`C:\Users\Administrator`，新建一个名为"_netrc"的文件，文件中内容格式如下：
+```
+machine github.com
+login your-usernmae
+password your-password
+```
